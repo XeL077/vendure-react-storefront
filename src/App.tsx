@@ -1,15 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
+import { observer } from 'mobx-react';
+import { MainStore } from './stores/MainStore';
 
-function App() {
-  return (
+export const App = observer(() => {
+    const [store] = useState(() => new MainStore())
+    return (
     <div className="App">
-      <div className="App">
-      <p>counter</p>
-      </div>
+      {store.count}
+      <button onClick={() => store.changeTest(store.count + 1)}>+</button>
     </div>
-  );
-}
-
-export default App;
+    );
+});
