@@ -1,0 +1,11 @@
+/*! csshash:b8whv */
+.class-sliders-line {
+    display: flex;
+    /* хак от моргания в сафари при листании */
+    z-index: 1;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
