@@ -14,13 +14,13 @@ function ContactsNavigate () {
 function TopNavigateLinks () {
     return (
         <nav className="contacts-navigate">
-            <a className="navigate_link" target="_blank" href="https://www.instagram.com/panny.anny/#">
+            <a className="navigate_link" target="_blank" rel="noreferrer" href="https://www.instagram.com/panny.anny/#">
                 Instagram
             </a>
-            <a className="navigate_link" href="about">
+            <a className="navigate_link" href="/about">
                 О нас
             </a>
-            <a className="navigate_link" href="#">
+            <a className="navigate_link" href="/contact">
                 Контакты
             </a>
         </nav>

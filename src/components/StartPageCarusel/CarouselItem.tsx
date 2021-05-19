@@ -1,7 +1,15 @@
 import React from "react";
+import "./StartPageCaruselItem.css";
 
-export class CarouselItem extends React.Component {
+interface IProps {
+    header: string;
+    subheader: string;
+    price: string;
+    description?: string;
+}
+export class CarouselItem extends React.Component<IProps> {
     render () {
+        const {header, subheader, price, description} = this.props;
         return (
             <div className="carousel-item">
                 <div className="carousel-item__left">
@@ -10,12 +18,10 @@ export class CarouselItem extends React.Component {
                     </div>
                 </div>
                 <div className="carousel-item__right">
-                    <h1>Заголовок</h1>
-                    <h2>Подзаголовок</h2>
-                    <span>1 000.99 ₽</span>
-                    <div>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
+                    <h1>{header}</h1>
+                    <h2>{subheader}</h2>
+                    <span>{price} ₽</span>
+                    <div>{description}</div>
 
                     <div className="carousel-item__right-bottom">
                         <div>Добавить в корзину</div>

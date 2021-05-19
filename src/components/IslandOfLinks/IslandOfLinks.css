@@ -1,0 +1,35 @@
+
+
+.links-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(340px, 380px));
+    grid-auto-flow: dense;
+
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 20px 20px;
+
+
+    height: 640px;
+}
+
+.island {
+    width: 340px;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+
+    grid-column-end: span 1;
+    grid-row-end: span 2;
+
+    text-align: left;
+
+    background: lightgrey;
+}
+.island_wide {
+    width: 512px;;
+}
+.island_half {
+    grid-column-end: auto;
+    grid-row-end: auto;
+}

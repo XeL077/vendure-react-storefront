@@ -1,0 +1,14 @@
+.share-look-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto;
+    margin: auto;
+    
+    width: 960px;
+    height: 650px;
+}
+
+.share-look {
+    background: lightgray;
+
+}

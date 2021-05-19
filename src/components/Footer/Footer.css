@@ -1,0 +1,6 @@
+@import url('../../ui/vars.css');
+
+.footer {
+    background: var(--color_black_bg);
+    color: var(--color_white_text);
+}
