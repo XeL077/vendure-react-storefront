@@ -3,8 +3,22 @@
 .footer {
     background: var(--color_black_bg);
     color: var(--color_white_text);
+    padding: 45px 0;
 
-    & a {
-        color: var(--color_white_text);
+    & .footer-wrapper {
+        max-width: 960px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer-link {
+    color: var(--color_white_text);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: underline;
     }
 }
