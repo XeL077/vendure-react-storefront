@@ -12,9 +12,12 @@ export class MainRouting extends React.Component {
                 <Router>    
                     <Switch>
                         <Route exact path='/' component={StartPage} />
-                        <Route exact path='/products' component={Products} />
+                        <Route exact path='/category/:categoryName' component={Products} />
                         <Route exact path='/singleproduct/:id' component={Singleproduct}/>
                         <Route exact path='/cart' component={Cart}/>
+                        <Route path="*">
+                            404 error
+                        </Route>
                     </Switch>   
                 </Router>
             </div>

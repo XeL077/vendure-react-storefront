@@ -1,11 +1,18 @@
 import React from "react";
+import {
+    useParams
+  } from "react-router-dom";
 
-export class Products extends React.Component {
-    render () {
+interface IParamsProductsRouter {
+    categoryName: string
+}
+
+export function Products () {
+    let {categoryName} : IParamsProductsRouter = useParams();
+
         return (
             <div>
-                Product
+                Product $ {categoryName}
             </div>
         )
-    }
 }

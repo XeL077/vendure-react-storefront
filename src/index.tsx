@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {App} from './App';
 import reportWebVitals from './reportWebVitals';
+import { ApolloProviderService } from './providers/data/data.service';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProviderService>
+      <App />
+    </ApolloProviderService> 
   </React.StrictMode>,
   document.getElementById('root')
 );

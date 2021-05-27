@@ -1,0 +1,12 @@
+.menu-collections {
+    background: #F9F9F9;
+    margin: auto;
+    padding: 0;
+}
+
+.menu-item {
+    color: #151515;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-block;
+}
