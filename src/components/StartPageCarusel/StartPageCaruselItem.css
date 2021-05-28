@@ -1,4 +1,36 @@
 .carousel-item {
     height: 700px;
-    width: 1280px;
+    display: flex;
+}
+.carousel-item__left, .carousel-item__right {
+    width: 50%;
+    position: relative;
+}
+.carousel-item__left {
+    max-width: 600px;
+}
+
+.carousel-item__left img.carousel-item__img {
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+.carousel-item__image-bg {
+    background: rgb(231 240 242 / 30%);
+    width: 90%;
+    height: 100%;
+}
+
+
+
+.carousel .control-dots {
+    background: white;
+    margin: 0;
+    border-top: 1px solid #C4C4C4;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

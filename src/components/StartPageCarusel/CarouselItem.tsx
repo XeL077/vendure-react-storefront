@@ -13,9 +13,8 @@ export class CarouselItem extends React.Component<IProps> {
         return (
             <div className="carousel-item">
                 <div className="carousel-item__left">
-                    <div className="carousel-item__image-bg">
-                        <img alt="test" />
-                    </div>
+                    <img className="carousel-item__img" alt="test" src="/img/slider_example.png" />
+                    <div className="carousel-item__image-bg"></div>
                 </div>
                 <div className="carousel-item__right">
                     <h1>{header}</h1>
