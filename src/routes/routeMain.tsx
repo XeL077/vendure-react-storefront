@@ -4,12 +4,14 @@ import {Products} from '../Pages/Products/Products';
 import {Singleproduct} from '../Pages/Singleproduct/Singleproduct';
 import {Cart} from '../Pages/Cart/Cart';
 import {BrowserRouter as Router , Route, Switch} from 'react-router-dom'
+import { MenuCollections } from "../components/MenuCollections/MenuCollections";
 
 export class MainRouting extends React.Component {
     render() {
         return (
             <div>
-                <Router>    
+                <Router>
+                    <MenuCollections />
                     <Switch>
                         <Route exact path='/' component={StartPage} />
                         <Route exact path='/category/:categoryName' component={Products} />

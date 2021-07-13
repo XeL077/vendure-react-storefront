@@ -9,4 +9,7 @@
     text-decoration: none;
     padding: 14px;
     display: inline-block;
+    &.menu-item_selected {
+        color: red;
+    }
 }
