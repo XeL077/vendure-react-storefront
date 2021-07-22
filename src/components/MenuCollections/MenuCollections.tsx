@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { NavLink } from 'react-router-dom';
 import {GET_COLLECTIONS} from "../../providers/graphql/documents.graphql";

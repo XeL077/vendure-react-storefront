@@ -1,3 +1,4 @@
+import * as React from "react";
 import './HeaderTopNavigate.css';
 
 const phoneNumber = '+420 336 775 664';

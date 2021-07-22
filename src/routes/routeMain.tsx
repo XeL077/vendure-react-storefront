@@ -1,5 +1,6 @@
 import React from "react";
 import {StartPage} from '../Pages/StartPage/StartPage';
+import {AllProductsList} from "../Pages/AllProductsList/AllProductsList";
 import {Products} from '../Pages/Products/Products';
 import {Singleproduct} from '../Pages/Singleproduct/Singleproduct';
 import {Cart} from '../Pages/Cart/Cart';
@@ -14,6 +15,7 @@ export class MainRouting extends React.Component {
                     <MenuCollections />
                     <Switch>
                         <Route exact path='/' component={StartPage} />
+                        <Route exact path='/category/' component={AllProductsList} />
                         <Route exact path='/category/:categoryName' component={Products} />
                         <Route exact path='/singleproduct/:id' component={Singleproduct}/>
                         <Route exact path='/cart' component={Cart}/>
