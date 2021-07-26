@@ -1,13 +1,18 @@
 import React from 'react';
-import ApolloClient, { InMemoryCache } from 'apollo-boost';
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloProvider,
+} from "@apollo/client";
 
-import {ApolloProvider} from '@apollo/react-hooks';
-
+import introspectionResult  from '../../generated/introspection-results';
 
 const client = new ApolloClient({
    uri: 'http://localhost:3000/shop-api/?languageCode=ru',
    name: 'react-web-client',
-   cache: new InMemoryCache(),
+   cache: new InMemoryCache({
+       possibleTypes: introspectionResult.possibleTypes,
+   }),
 });
 
 interface IPropsApolloProvider {

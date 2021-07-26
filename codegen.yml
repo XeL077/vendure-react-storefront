@@ -1,0 +1,46 @@
+overwrite: true
+schema: "./schema.graphql"
+documents: "./src/**/*.graphql.ts"
+
+generates:
+  # Get schemas from server
+  ./src/generated/schemas.tsx:
+    documents: './src/**/**.gql'
+    plugins:
+      - typescript
+      - add:
+          content: "// tslint:disable"
+  # Create operations based on queries
+  ./src/generated/operations.tsx:
+    documents: './src/**/**.gql'
+    preset: import-types
+    presetConfig:
+      typesPath: ./schemas
+    plugins:
+      - add:
+          content: "// tslint:disable"
+      - typescript-operations
+  # 1. Export GraphQL documents
+  # 2. React interface
+  ./src/generated/hooks.tsx:
+    documents: './src/**/**.gql'
+    preset: import-types
+    presetConfig:
+      typesPath: ./operations
+    plugins:
+      - add:
+          content: "// tslint:disable"
+      - typescript-react-apollo
+    config:
+      # Optionals
+      withHOC: false
+      withComponent: false
+      withHooks: true
+  # introspection
+  ./src/generated/introspection-results.ts:
+    plugins:
+      - add:
+          content: "// tslint:disable"
+      - "fragment-matcher"
+    config:
+      apolloClientVersion: 3
