@@ -20,6 +20,9 @@ generates:
       - add:
           content: "// tslint:disable"
       - typescript-operations
+    config:
+      strict: true
+      preResolveTypes: true
   # 1. Export GraphQL documents
   # 2. React interface
   ./src/generated/hooks.tsx:

@@ -1,12 +1,11 @@
 import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
 import { NavLink } from 'react-router-dom';
-import {GET_COLLECTIONS} from "../../providers/graphql/documents.graphql";
+import { useGetCollectionsQuery} from "../../generated/hooks";
 import "./MenuCollections.css";
 
-
 export function MenuCollections () {
-    const { data } = useQuery(GET_COLLECTIONS);
+    const{ data } = useGetCollectionsQuery();
+
     if(!data) {
       return null;
     }
